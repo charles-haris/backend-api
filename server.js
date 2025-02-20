@@ -3,7 +3,6 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const sequelize = require('./database/config');
 const userRoutes = require('./routes/userRoutes');
-const roleRoutes = require('./routes/roleRoutes');
 
 
 
@@ -15,7 +14,6 @@ app.use(bodyParser.json());
 
 // Routes
 app.use('/api', userRoutes);
-app.use('/api', roleRoutes);
 
 
 // Sync Database

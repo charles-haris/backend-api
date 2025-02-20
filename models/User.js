@@ -1,7 +1,5 @@
 const { DataTypes } = require('sequelize');
 const sequelize = require('../database/config');
-const Role = require('./Role')
-
 
 const User = sequelize.define('User', {
   id: {
@@ -22,18 +20,23 @@ const User = sequelize.define('User', {
     type: DataTypes.INTEGER,
     allowNull: true,
   },
-  active: {
+  user_updated_at: {
+    type: DataTypes.DATE,
+    allowNull: true,
+  },
+  updated_by: {
+    type: DataTypes.INTEGER,
+    allowNull: true,
+  },
+  is_active: {
     type: DataTypes.INTEGER,
     allowNull: false,
     defaultValue: true,
     values: 0
   },
 
-
 });
 
-User.belongsToMany(Role, { through: 'UserRole' })
-Role.belongsToMany(User, { through: 'UserRole' })
 
 
 module.exports = User;
