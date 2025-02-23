@@ -13,7 +13,7 @@ exports.createUser = async (req, res) => {
         res.status(400).json({ error: error.message });
     }
 };
-
+//get all the users
 exports.getUsers = async (req, res) => {
     try {
         const users = await User.findAll();
