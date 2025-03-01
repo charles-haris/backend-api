@@ -17,9 +17,9 @@ app.use('/api', userRoutes);
 
 
 // Sync Database
-sequelize.sync({ alter: true }).then(() => {
-    console.log('Database synced');
-});
+// sequelize.sync({ alter: true }).then(() => {
+//     console.log('Database synced');
+// });
 
 // Start Server
 const PORT = process.env.PORT || 3000;

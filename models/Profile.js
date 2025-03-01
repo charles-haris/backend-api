@@ -16,10 +16,7 @@ const Profile = sequelize.define('Profile', {
         type: DataTypes.STRING,
         allowNull: true,
     },
-    cni: {
-        type: DataTypes.STRING,
-        allowNull: false,
-    },
+
     tel: {
         type: DataTypes.STRING,
         allowNull: true,
