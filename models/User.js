@@ -36,7 +36,7 @@ const User = sequelize.define('User', {
   },
 
 });
-
+User.hasOne(Profile)
 
 
 module.exports = User;
